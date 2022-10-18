@@ -7,13 +7,13 @@ public class Main {
         System.out.print("Precizati cate minute utilizatorul a folosit o piesa de echipament sportiv: ");
         Scanner inputDevice = new Scanner(System.in);
         Minute=inputDevice.nextInt();
-        inputDevice.nextLine();
-        while(Minute>=60){
+        inputDevice.nextLine();//if you keep this line the program wait to introduce another string but you don't do anything with it
+        while(Minute>=60){// interesting choice but what if you devide by 60 for houres and for extra minutes use %
             Ore++;
-            Minute=Minute-60;
+            Minute=Minute-60; 
         }
         PretTotal=40*Ore+Minute;
-        System.out.print("Ore: "+Ore+"\n");
+        System.out.print("Ore: "+Ore+"\n"); // instead of '\n' you can use System.out.println method
         System.out.print("Minute: "+Minute+"\n");
         System.out.print("Pretul total: "+PretTotal+"$");
     }
